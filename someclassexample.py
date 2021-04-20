@@ -7,8 +7,8 @@ class Character():
         self.name = name
         self.hp = hp
         self.inventory = inventory
-        self.Def = Def
-        self.int = int
+        self.mdef = mdef
+        self.dex = dex
         self.spd = spd
 
 
