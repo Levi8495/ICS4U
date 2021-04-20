@@ -3,7 +3,7 @@
 
 class Character():
 
-    def __init__(self, name, hp, inventory, Def, int, spd):
+    def __init__(self, name, hp, inventory, mdef, dex, spd):
         self.name = name
         self.hp = hp
         self.inventory = inventory
