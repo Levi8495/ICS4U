@@ -69,6 +69,8 @@ class char_stuff():
     def drop_item(self):
         while True:
             item = input("What item do you want to drop? : ")
+            if item == 'back':
+                return
             answer = input("Do you really want to drop it? Yes or No : ")
             if answer.upper() == 'NO':
                 return
