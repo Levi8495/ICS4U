@@ -30,7 +30,6 @@ class diceRolls():
 
 
 class char_stuff():
-
     def __init__(self):
         self.name = char_stuff.get_charName()
         self.inventory = []
@@ -51,7 +50,10 @@ class char_stuff():
         stats += f"| -  SPEED =  {self.speed}\n"
         stats += f"| -  INVENTORY : "
         for i in self.inventory:
-            stats += f"{i}, "
+            if i == self.inventory[len(self.inventory) - 1]:
+                stats += f"{i}."
+            else:
+                stats += f"{i}, "
         stats += "\n"
         stars = len(self.name) * "*"
         stats += f"\n**************{stars}**************"
@@ -82,7 +84,8 @@ class char_stuff():
                 print("You can only drop something currently in your inventory.")
                 continue
 
-
+class action(): # lawsuit
+    pass
 
 def main():
 
