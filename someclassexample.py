@@ -58,20 +58,15 @@ class char_stuff():
     def add_item(self, item):
         self.inventory.append(item)
 
-    def drop_item(self): # im having a hard time getting this to work, hopefully i can get it fixed pretty quick lol
-        
-        item = input("Which item do you want to drop? : ")
-
-        try:
-            item = input("Which item do you want to drop? : ")
-            for i in self.inventory:
-                if i == item:
-                    self.inventory.remove(item)
-                    print("Item removed: ", item)
-            return
-        except IndexError:
-            print("You can only drop items currently in your inventory.")
-            self.drop_item()
+   def drop_item(self): # this seems to work
+        while True:
+            item = input("What item do you want to drop? : ")
+            try:
+                self.inventory.remove(item)
+                break
+            except ValueError:
+                print("You can only drop something currently in your inventory.")
+                continue
 
 
 
@@ -80,8 +75,8 @@ class char_stuff():
 
 someguy = char_stuff()
 print(someguy)
-someguy.add_item("my penis")
-someguy.add_item("my balls")
+someguy.add_item("something cool")
+someguy.add_item("another cool thing")
 someguy.drop_item()
 print(someguy)
 k = input("lol")
